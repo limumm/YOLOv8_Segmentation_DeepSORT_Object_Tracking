@@ -12,7 +12,7 @@ ROOT = FILE.parent  # root directory
 README = (ROOT / "README.md").read_text(encoding="utf-8")
 REQUIREMENTS = [f'{x.name}{x.specifier}' for x in pkg.parse_requirements((ROOT / 'requirements.txt').read_text())]
 
-
+# 加个注释
 def get_version():
     file = ROOT / 'ultralytics/__init__.py'
     return re.search(r'^__version__ = [\'"]([^\'"]*)[\'"]', file.read_text(), re.M)[1]
